@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --lightGrey: hsl(217, 12%, 63%);
+  --mediumGrey: hsl(216, 12%, 54%);
+  --darkBlue: hsl(213, 19%, 18%);
+  --veryDarkBlue: hsl(216, 12%, 8%);
+  --mainTrans: all 0.3s ease;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  background-color: var(--veryDarkBlue);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 400px;
+  background-color: var(--darkBlue);
+  border-radius: 15px;
+  color: #fff;
+  padding: 20px;
+}
+.container .card.centred {
+  text-align: center;
+}
+.container img {
+  margin: 20px 0;
+}
+.container img.star {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 100%;
+  background-color: var(--veryDarkBlue);
+}
+.container .select {
+  color: var(--orange);
+  background-color: var(--veryDarkBlue);
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 20px;
+  display: none;
+  text-align: center;
+}
+.container .select.selected {
+  display: block;
+}
+.container h2 {
+  font-size: 28px;
+  margin: 15px 0;
+}
+.container .quest {
+  color: var(--mediumGrey);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.container .rate {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto;
+}
+.container .rate li {
+  background-color: var(--veryDarkBlue);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.container li.active {
+  background-color: var(--orange);
+  transition: var(--mainTrans);
+}
+.container button {
+  width: 100%;
+  margin: 20px auto;
+  background-color: var(--orange);
+  color: var(--white);
+  outline: none;
+  border: none;
+  padding: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.container button:hover {
+  background-color: var(--white);
+  color: var(--orange);
+  transition: var(--mainTrans);
+}
